@@ -1,0 +1,59 @@
+
+      THINGS TO DO FOR THE SHEAFHOM 2.2 RELEASE
+                    February 2007
+
+...except that in March-July 2007 we decided not to have a 2.2 release.
+
+Settle on which declarations to use and which not.
+
+Get the working copy into publishable form.
+
+Check unit-test-5.lisp for the tests in sparse-v and csparse.
+
+All files should start with (in-package :shh2), but the unit tests
+should be in cl-user.
+
+Lispy icon in the Java windows?
+
+Test on all types of sparse-elt: Z as cons, 31991 as cons, 12379 as
+cons, mod p as defstruct.  Get good units to load automatically for
+whichever one you load.  Document how to choose to load each one.  You
+can only load one cons version at a time, but any number of the
+defstructs.  Nothing is wrong with the defstructs except memory
+efficiency.  "If the whole computation will use only one ring, use the
+cons version for that ring."
+
+Test on CLisp and ABCL as well as Allegro.  Document this fact.
+
+Ultimate goal: announce on comp.lang.lisp and sci.math.research.  That
+will call for a short but professional abstract, plus a link to my
+home page (and Lispwire if it's up to date).
+
+Get the big comment at the top of sparse-elt.lisp into the reference
+manual.  Label it as crucial for which domain you want to work over,
+as well for what a sparse-elt is.
+
+Just before publishing
+--delete all files not for release: make4N, p3, cardp3, sl4dat, eqco4N,
+  TODO*.txt, copies of *multi-file-...* in make.lisp, etc.
+--convert tabs to spaces
+
+THINGS TO POST ON MY SITE:
+--installation notes in README.txt
+--installation notes at the top of the reference manual(?)
+--some intro essay in the reference manual(?)
+--the source code
+--reference manual in pdf via latex
+--reference manual in html (as zip file) via latex2html
+
+THINGS TO POST ON LISPWIRE:
+--description (abstract; mine in 2.1 was too long?)
+--installation notes as in README.txt
+--tutorial
+--other links will hopefully take care of themselves in the raw entry
+
+After releasing, compare dir /O:EN on shh22prerel and shh22 and put
+back things we took out: three group files, *BLACK.lisp, group exports
+in make.lisp, group compile-and-load in make.lisp, TODO.txt,
+eigenhelper.txt, category.lisp and homolalg.lisp and two-complex.lisp
+and all their exports and compile-and-load's in make.lisp, etc.

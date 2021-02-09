@@ -1,0 +1,42 @@
+
+      THINGS TO DO FOR THE SHEAFHOM 2.2 RELEASE
+                     February 2007
+
+Back up \mark\math\shh2 to shh22prerel.zip and put it on my geocities
+site for safekeeping.
+
+Ultimate goal: announce on comp.lang.lisp and sci.math.research.  That
+will call for a short but professional abstract, plus a link to my
+home page (and Lispwire if it's up to date).
+
+First, try to Linj it.  That way, (1) I can release in two languages;
+(2) the main manual can be the Javadoc, except for the major macros.
+
+Settle on which declarations to use and which not.
+
+Get the working copy into publishable form.  Just before publishing,
+make a branch.  In the branch,
+--delete group code
+--don't lose the group*BLACK.lisp code on the stick
+--delete group symbol exports from make.lisp
+--delete (load ...group...) from make.lisp
+
+THINGS TO POST ON MY SITE:
+--installation notes in README.txt
+--installation notes at the top of the reference manual(?)
+--the source code
+--reference manual in pdf via latex
+--reference manual in html (as zip file) via latex2html
+
+THINGS TO POST ON LISPWIRE:
+--description (abstract; mine in 2.1 was too long?)
+--installation notes as in README.txt
+--tutorial
+--other links will hopefully take care of themselves in the raw entry
+
+-------------------- Other ideas --------------------
+
+Write installation guide and intro in the user manual.
+
+Lispy icon in the Java windows?
+

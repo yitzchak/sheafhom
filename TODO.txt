@@ -1,0 +1,77 @@
+--------------- Sept. 6, 2006 ---------------
+
+Speed up dense-matrix-mod-p.  Use a 1D array?  Use rem everywhere?
+
+Get other levels going on Nicholas's machine, Connie's, abel,
+dirichlet, ....
+
+----------------------------------------
+
+After the meeting with Avner and Paul on August 24, 2006, when
+Sheafhom 2.1.9 was massively converted to Sheafhom 2.2, supporting any
+Euclidean domain:
+
+Figure out why 31991 went wrong so that we had to switch to 12379.
+Fix 31991.
+
+Run the 31991 computations for each level N = 3, 4, ..., 1000.  This
+is for the Part II paper with Avner and Paul.
+
+On the side, run Shh 2.1.9 over Z on all the levels we can reach today
+in order to check that the Q-rank and F_31991-rank of H^5(..., C_triv)
+coincide.  It is also forward-looking for Part III.
+
+Generalize to PID's?  PIR's?  Dedekind domains d'apres Cohen?  ...If
+homolalg is not working well mod p^2, or just so we can reach higher
+levels, change "domain" to "commutative ring with 1" so we can work
+over Z/(p^2) and other quotients Z/(composite).  De-emphasize
+Euclidean, and emphasize PIR instead.
+
+Get back to the modular hnf idea so that Z computations work very
+well.  This will be for the Part III paper.
+
+Get back to homolalg.  Work with arbitrary Z-modules of coefficients.
+This will be for the Part IV paper.
+
+Write up our 1996 spectral sequence for the Borel-Serre boundary.
+This will be for the Part V paper.
+
+--------------- Thoughts from June 2006 ---------------
+
+Use series for (.) a wrapper around snfp*.txt etc.; (.) msets.
+
+A longer-term idea: replace numthy with code that calls out to Pari!
+
+I spent all that time in csparse specifying which variables are fixnum
+or nnfixnum.  But someone on c.l.l pointed out that you can't use
+(safety 0) in a library because it disables argument checking =>
+should use (safety 1) => fixnum addition is checked in ACL.  Run some
+disassemble tests, and timing tests, to see how much we *REALLY!!!*
+lose with safety 1 vs 0.
+
+---------- After March 15, 2005 ----------
+
+Put colors into the movies: blue for 1 digits, red for 100+
+
+Save the movies as jpgs and assemble them?
+
+When using pure Markowitz in movies, do the ut sort
+anyway, and compare the two algorithms on the same matrix.
+
+Use LLL in strips to find the strip's kernel and eliminate columns
+from the strip (idea 3/14).
+
+Put in the effort to port it to CLISP and GCL, to see who performs
+better on bignums.  [Note added spring 2006: CLISP uses much less
+memory and performs well on bignums, but is about 4 times slower on
+the routine parts.]
+
+---------- Before June 20, 2005 ----------
+
+Run all the single-float code [a little csparsez and gui, mostly
+two-complex and minimize] through ACL's compiler flags to make sure
+the single-float declarations are all there.  [Note added August 2006:
+assess how much it matters.]
+
+Check the declamations in all the .lisp files, especially those after
+the submission to Lispwire.
